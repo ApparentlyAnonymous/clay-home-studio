@@ -39,20 +39,22 @@ export default function Gallery() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {galleryItems.map((item, index) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center"
-          >
-            <img
-              src={item.src}
-              alt={item.title}
-              className="w-full h-[320px] object-cover rounded-2xl shadow-md mb-4"
-            />
-            <p className="text-gray-700 text-sm">{item.title}</p>
-          </motion.div>
+  key={index}
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  whileHover={{ scale: 1.03 }}
+  transition={{ duration: 0.4, delay: index * 0.1 }}
+  viewport={{ once: true }}
+  className="flex flex-col items-center cursor-pointer"
+>
+  <motion.img
+    src={item.src}
+    alt={item.title}
+    className="w-full h-[320px] object-cover rounded-2xl shadow-md mb-4 transition-transform duration-300"
+    whileHover={{ scale: 1.05 }}
+  />
+  <p className="text-gray-700 text-sm">{item.title}</p>
+</motion.div>
         ))}
       </div>
     </section>
