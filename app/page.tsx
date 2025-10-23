@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import About from "../components/About"
 import Gallery from "../components/Gallery"
 import Footer from "../components/Footer"
+import Contact from "../components/Contact"
 
 export default function Home() {
   return (
@@ -50,6 +51,7 @@ export default function Home() {
       {/* ABOUT */}
       <About />
 <Gallery />
+    <Contact />
 <Footer />
     </main>
   )
