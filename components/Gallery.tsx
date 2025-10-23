@@ -31,7 +31,8 @@ const galleryItems = [
 
 export default function Gallery() {
   return (
-    <section className="bg-[#faf9f7] py-28 px-8 md:px-20">
+    <section id="gallery" className="bg-[#faf9f7] py-28 px-8 md:px-20">
+
       <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-12 text-center">
         Our Work
       </h2>

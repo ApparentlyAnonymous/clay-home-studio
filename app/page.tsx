@@ -1,22 +1,29 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Navbar from "../components/Navbar"
 import About from "../components/About"
 import Gallery from "../components/Gallery"
-import Footer from "../components/Footer"
 import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#faf9f7]">
-      {/* HERO */}
-      <section className="min-h-[80vh] flex items-center justify-between px-8 md:px-20 lg:px-32">
+      {/* ✅ NAVBAR */}
+      <Navbar />
+
+      {/* ✅ HERO SECTION */}
+      <section
+        id="top"
+        className="min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-8 md:px-20 lg:px-32 pt-24"
+      >
         {/* Text */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="max-w-xl"
+          className="max-w-xl text-center md:text-left"
         >
           <h1 className="text-5xl md:text-6xl font-light tracking-tight text-gray-800 mb-6">
             Clay Home Studio
@@ -39,7 +46,6 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="hidden md:block"
         >
-          {/* QUICK OPTION: external image */}
           <img
             src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop"
             alt="Pottery hero"
@@ -48,11 +54,17 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ABOUT */}
+      {/* ✅ ABOUT */}
       <About />
-<Gallery />
-    <Contact />
-<Footer />
+
+      {/* ✅ GALLERY */}
+      <Gallery />
+
+      {/* ✅ CONTACT */}
+      <Contact />
+
+      {/* ✅ FOOTER */}
+      <Footer />
     </main>
   )
 }
